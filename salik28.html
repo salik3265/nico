@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Планируй свой день легко</h1>
+        <nav>
+            <button id="register">Регистрация</button>
+            <button id="login">Вход</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="demo">
+            <h2>Пример работы:</h2>
+            <ul class="demo-list">
+                <li class="task high">Высокий приоритет: Завершить проект</li>
+                <li class="task medium">Средний приоритет: Купить продукты</li>
+                <li class="task low">Низкий приоритет: Прочитать книгу</li>
+            </ul>
+        </section>
+
+        <section id="dashboard" class="hidden">
+            <h2>Личный кабинет</h2>
+            <div class="controls">
+                <button id="addTask">Добавить задачу</button>
+                <select id="filterTasks">
+                    <option value="all">Все</option>
+                    <option value="completed">Выполненные</option>
+                    <option value="in-progress">В процессе</option>
+                    <option value="high">Высокий приоритет</option>
+                </select>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="analytics" class="hidden">
+            <h2>Аналитика</h2>
+            <div id="chartContainer">График выполненных задач появится здесь.</div>
+            <div id="stats">Статистика по приоритетам появится здесь.</div>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <form id="feedbackForm">
+                <label for="feedback">Ваши предложения:</label>
+                <textarea id="feedback" rows="5" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© salik</p>
+    </footer>
+</body>
+</html>
